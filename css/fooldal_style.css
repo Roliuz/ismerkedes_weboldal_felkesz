@@ -1,0 +1,1251 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&family=Bebas+Neue&family=Maven+Pro:wght@400;500&family=Oswald:wght@200;300;600;700&family=PT+Sans+Narrow&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas neue', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    text-decoration: none;
+}
+
+*::selection {
+    color: white;
+    background-color: #7e0000;
+
+}
+
+::-webkit-scrollbar {
+    width: .5rem;
+    height: .3rem;
+
+}
+
+::-webkit-scrollbar-track {
+    background-color: none;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #7e0000;
+    border-radius: 4px;
+
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.fekete {
+    background-color: black;
+}
+
+.content {
+    color: white;
+}
+
+nav {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    height: 80px;
+    width: 100%;
+    text-decoration: none;
+    z-index: 100;
+}
+
+label.logo {
+    color: white !important;
+    font-size: 26px;
+    line-height: 80px;
+    font-weight: 800;
+    font-style: italic;
+    transition: .2s ease;
+    text-shadow: 3px 5px 20px black;
+}
+
+.logo img {
+    width: 3rem;
+    margin-right: 1rem;
+    margin-left: 0.7rem;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 22px;
+    padding: 7px 13px;
+    border-radius: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+
+a.active a:hover {
+    background-color: #ff7171;
+    transition: .6s;
+}
+
+.checkbtn {
+    line-height: 80px;
+    font-size: 27px;
+    float: right;
+    cursor: pointer;
+    margin-right: 40px;
+    display: none;
+}
+
+.checkbtn i {
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    transition: .5s ease;
+}
+
+.checkbtn i:hover {
+    background: #ff7171;
+
+}
+
+#check {
+    display: none;
+}
+
+nav ul li a {
+    position: relative;
+}
+
+nav ul li a:hover {
+    background: none;
+    color: #AD0000;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white !important;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav ul li a::before {
+    top: 0;
+    transform-origin: left;
+}
+
+nav ul li a::after {
+    bottom: 0;
+    transform-origin: right;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* reszponzív rész */
+
+
+
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 24px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        top: 80px;
+        left: -100%;
+        padding-top: 80px;
+        text-align: center;
+        transition: .5s ease;
+        z-index: 1;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 30px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        color: black;
+    }
+
+    a.active,
+    a:hover {
+        background: none;
+        color: #3a3a3a;
+        text-shadow: 0 10px 15px #8e8e8e;
+
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+    .reg-gomb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        float: none !important;
+        margin-right: 2rem;
+
+    }
+
+}
+
+
+/* --Nyári tábor szöveg-- */
+
+
+.nyari h1 {
+    position: relative;
+    font-style: italic;
+    letter-spacing: 3px;
+    font-size: 3.4rem;
+    text-shadow: 0px 5px 15px rgba(151, 0, 0, 0.8);
+    color: #AD0000;
+    left: -100%;
+    animation: slide-in 2s forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@media (max-width:1200px) {
+    .nyari h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
+.szoveg-container p {
+    font-size: 30px;
+    color: white !important;
+}
+
+.nem-hagyhatod {
+    animation: slideInLeft 1.3s forwards;
+    position: relative;
+    left: 200%;
+}
+
+.nem-hagyhatod h1 {
+    animation: flashing 1s infinite;
+    font-size: 3.2rem;
+    letter-spacing: 3px;
+}
+
+@keyframes slideInLeft {
+    0% {
+        left: 200%
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes flashing {
+    0% {
+        opacity: 1;
+
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width:990px) {
+    .nyari h1 {
+        font-size: 1.8rem;
+    }
+
+    .nem-hagyhatod h1 {
+        font-size: 2rem;
+    }
+
+    .szoveg-container p {
+        font-size: 22px;
+    }
+
+    .offdisplay {
+        display: none;
+    }
+}
+
+.logo img {
+    width: 10rem;
+}
+
+
+.megfelelo h1 {
+    font-family: 'Play', sans-serif;
+    overflow: hidden;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+    white-space: nowrap;
+    margin-bottom: 4rem;
+}
+
+@keyframes typing {
+    from {
+        width: 0%;
+        /* A szöveg elején nem látszik */
+    }
+
+    to {
+        width: 100%;
+        /* A szöveg vége teljes szélességű lesz, láthatóvá válik */
+    }
+}
+
+
+/* --Kártyák-- */
+
+.card {
+    width: 46rem;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 300px;
+    padding: 35px;
+
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.763);
+    margin-bottom: 3rem;
+    backdrop-filter: blur(15px);
+}
+
+.card h1 {
+    font-size: 3.7rem;
+    font-weight: bold;
+    color: #1f1f1f;
+    /* Szöveg színe */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.card h1 span {
+    color: #AD0000;
+}
+
+@keyframes balrol-kartya {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.card-left {
+    animation: balrol-kartya 1.6s forwards;
+}
+
+@keyframes jobbrol-kartya {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.card-right {
+    animation: jobbrol-kartya 1.6s forwards;
+}
+
+@media (max-width:850px) {
+    .card {
+        width: 30rem;
+    }
+
+    .card h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .card h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width:512px) {
+    .card {
+        width: 20rem;
+    }
+
+    .card h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .card h2 {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+
+.teszt {
+    background-color: white;
+}
+
+
+
+
+
+.kepzeld-el h1 {
+    letter-spacing: 3.6px;
+    font-weight: bolder;
+}
+
+.teszt p {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.6rem;
+}
+
+.counter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.number {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: black;
+    margin: 5px;
+}
+
+.number:hover {
+    background-color: #AD0000;
+    color: white;
+    border-radius: 11px;
+    cursor: pointer;
+}
+
+.eredmeny strong,
+p {
+    font-size: 1.7rem;
+    color: black;
+}
+
+
+
+.kerdojel {
+    margin-top: 5rem;
+}
+
+.kerdojel img {
+    width: 100px;
+}
+
+hr {
+    border-top: 3px solid #7e0000;
+}
+
+.legfontosabb h3 {
+    text-align: center;
+    font-size: 1.9rem;
+    margin-top: 2rem;
+    letter-spacing: 1.2px;
+}
+
+.legfontosabb h3 span {
+    color: #AD0000;
+    animation: vibrate 0.6s infinite;
+}
+
+@keyframes vibrate {
+    0% {
+        color: black;
+    }
+
+    100% {
+        color: #AD0000;
+    }
+}
+
+.programok {
+    max-width: 70%;
+    background-color: rgba(0, 0, 0, 0.34);
+    justify-content: center;
+    display: flex;
+    color: whitesmoke;
+    padding: 21px;
+    border-radius: 12px;
+    /* border: 2px black solid; */
+
+}
+
+
+
+.seperator-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.seperator {
+    width: 4rem;
+    height: 3px;
+    background: #aeaeae;
+    border: none;
+}
+
+
+
+.item {
+    position: relative;
+    margin-bottom: 30px;
+    float: left;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+    /* Flexbox konténerként kezeljük a .item-in elemet */
+    justify-content: center;
+    /* Középre igazítás */
+    align-items: center;
+    /* Középre igazítás */
+}
+
+.item .item-in {
+    width: 80%;
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    background: #000000ae;
+    padding: 10px;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 31px 6px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: 0px 0px 31px 6px rgba(0, 0, 0, 0.67);
+    box-shadow: 0px 0px 31px 6px rgba(0, 0, 0, 0.67);
+}
+
+.item .item-in:hover:before {
+    width: 100%;
+}
+
+.item .item-in::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 0%;
+    background: #fbfbfb;
+    right: 0px;
+    -webkit-transition: width 0.4s;
+    transition: width 0.4s;
+}
+
+.item h4 {
+    font-size: 2.7rem;
+    text-align: center;
+    margin-top: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white !important;
+}
+
+.item p {
+    font-size: 1.2rem;
+    color: white !important;
+}
+
+.item a {
+    font-family: 'Montserrat black', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: whitesmoke !important;
+
+}
+
+.item a i {
+    opacity: 0;
+    padding-left: 0px;
+    transition: 0.4s;
+    font-size: 24px;
+    display: inline-block;
+    top: 5px;
+    position: relative;
+}
+
+.item a:hover {
+    text-decoration: none;
+}
+
+.item .jelentkezes-link {
+    position: relative !important;
+    bottom: 10px;
+    left: 10px;
+    text-decoration: none;
+    color: white;
+    margin-top: 1rem;
+}
+
+
+
+.item a:hover i {
+    padding-left: 10px;
+    opacity: 1;
+    font-weight: 300;
+}
+
+.item .icon {
+    position: absolute;
+    top: 27px;
+    left: -16px;
+    cursor: pointer;
+}
+
+.item .icon a {
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: whitesmoke;
+    text-transform: none;
+}
+
+.item .icon svg {
+    width: 32px;
+    height: 32px;
+    float: left;
+}
+
+.item .icon .icon-topic {
+    opacity: 0;
+    padding-left: 0px;
+    transition: 0.4s;
+    display: inline-block;
+    top: 0px;
+    position: relative;
+}
+
+.item .icon:hover .icon-topic {
+    opacity: 1;
+    padding-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .item .icon {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
+
+.fejlodes {
+    background-color: #FF2626;
+}
+
+.fejlodes .fejlodes-pont h2 {
+    color: white;
+    font-family: 'Special elite', sans-serif;
+    font-size: 1.5rem;
+}
+
+.fejlodes .fejlodes-pont h2 span {
+    color: #1f1f1f;
+    font-family: 'Special elite', sans-serif;
+}
+
+.fejlodes .checkmark {
+    margin-right: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fejlodes-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+@media(max-width:768px) {
+    .fejlodes-container {
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-bottom: 2px solid white !important;
+    }
+
+    .fejlodes-container .fejlodes-pont h2 {
+        font-size: 1rem;
+    }
+
+    .eltuno {
+        display: none;
+    }
+}
+
+
+/* --mentor-- */
+
+.mentor h1 {
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 0 0 5px #fff, 0 0 10px #797979, 0 0 20px #4e4e4e, 0 0 30px #575757;
+    /* A text-shadow tulajdonsággal állítjuk be a glow hatást */
+    /* A text-shadow tulajdonsággal állítjuk be a glow hatást */
+}
+
+.mentorok {
+    margin-top: 4rem;
+}
+
+.mentorok .mentor-title h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+figure.snip1113 {
+    font-family: 'Raleway', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    min-width: 220px;
+    max-width: 400px;
+    width: 100%;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+figure.snip1113 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+figure.snip1113 img {
+    max-width: 65%;
+    margin: 40px auto;
+    display: block;
+    position: relative;
+    border: 3px solid #666666;
+    padding: 15px 15px 85px 15px;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+figure.snip1113 figcaption {
+    position: absolute;
+    height: 120px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    display: block;
+}
+
+figure.snip1113 h3 {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 1.7em;
+    width: 100%;
+    padding: 5px 12px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+figure.snip1113 h3 span {
+    font-weight: 800;
+}
+
+figure.snip1113 h4 {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    opacity: 0.6;
+    font-size: 1.1em;
+}
+
+figure.snip1113.red img {
+    border-color: #ab3326;
+}
+
+figure.snip1113.red h3,
+figure.snip1113.red h4 {
+    color: #ab3326;
+}
+
+.elotunes-animate {
+    animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+        display: none;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* --VIP csomag-- */
+
+.vip-csomag {
+    background-color: #000000;
+}
+
+
+.vip-csomag h1 {
+    font-size: 4rem;
+    letter-spacing: 5px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.vip-csomag h1 span {
+    color: #7e0000;
+}
+
+.vip-csomag {
+    color: white;
+}
+
+.vip-csomag .vip-title {
+    margin-bottom: 5rem;
+}
+
+.vip-csomag .sorszam {
+    text-align: center;
+    font-size: 3rem;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    width: 10rem;
+    /* A szélességet állítsd be a kívánt méretre */
+    margin: 0 auto;
+    /* Az elemet középre igazítja a horizontális tengelyen */
+    overflow: hidden;
+    /* Eltünteti a túlcsorduló tartalmat az animáció közben */
+}
+
+
+@keyframes elotorlesAnimacio {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 10rem;
+    }
+}
+
+.elotorles-animate {
+    animation: elotorlesAnimacio 0.7s linear;
+    /* Az elotorlesAnimacio animáció alkalmazása a .elotorles osztályra */
+}
+
+.vip-csomag .theme-title h1 {
+    font-size: 2.6rem;
+    font-family: 'Montserrat black', sans-serif;
+    text-transform: uppercase;
+}
+
+.vip-csomag .theme-szoveg {
+    margin-top: 3rem;
+}
+
+.vip-csomag .theme-szoveg p {
+    font-family: 'Montserrat ', sans-serif;
+    color: white !important;
+    text-align: justify;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.vip-csomag .theme-szoveg p span {
+    color: #7e0000;
+    font-family: 'Montserrat ', sans-serif;
+    font-weight: 600;
+}
+
+.tema {
+    margin-top: 4rem;
+}
+
+.tema .theme-list .col {
+    margin-bottom: 5rem;
+}
+
+.theme-list .checkmark {
+    display: inline-flex;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.point-container {
+    display: flex;
+    grid-template-columns: auto auto;
+}
+
+.theme-szoveg h2 {
+    color: #7e0000;
+    font-family: 'Montserrat black', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    animation: flashing 1s infinite;
+    margin-bottom: 3rem;
+}
+
+@media(max-width:768px) {
+    .point-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .vip-csomag .theme-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .vip-csomag .theme-szoveg p {
+        font-size: 1rem;
+    }
+
+    .kicsinyit {
+        font-size: 0.8rem;
+    }
+}
+
+/* --58 előny-- */
+
+
+.eszkalacio {}
+
+.eszkalacio ol {
+    list-style: none;
+    padding: 0;
+}
+
+.eszkalacio li+li {
+    margin-top: 1rem;
+}
+
+.eszkalacio li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: aliceblue;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: calc(100% - 2rem);
+    box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
+    font-size: 1.7rem;
+}
+
+.eszkalacio .hidden {
+    display: none;
+}
+
+.eszkalacio li::before {
+    counter-increment: list-item;
+    content: counter(list-item);
+    font-size: 3rem;
+    font-weight: 700;
+    width: 2em;
+    height: 2em;
+    background: black;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eszkalacio li:nth-child(even) {
+    flex-direction: row-reverse;
+    background: lavender;
+    margin-right: -2rem;
+    margin-left: 2rem;
+}
+
+.title h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+}
+
+.eszkalacio h3 {
+    text-align: center;
+}
+
+.eszkalacio p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+}
+
+/* --lista-- */
+
+
+#show-more-button {
+    cursor: pointer;
+
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#show-more-button i {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+#show-more-button i:hover {
+    background-color: #7e0000;
+    color: white;
+}
+
+.show-all {
+    max-height: none;
+}
+
+.workshop {
+    margin-top: 5rem;
+}
+
+.workshop .row {
+    display: flex;
+    align-items: stretch;
+}
+
+.workshop .col,
+.point {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+}
+
+.point {
+    border-left: 4px solid black;
+    margin-bottom: 1rem;
+    /* Hozzáadunk egy belső térközt a jobb oldalon */
+}
+
+.point-up {
+    border-top: 4px solid black;
+    padding-bottom: 10px;
+
+    /* Hozzáadunk egy belső térközt az alján */
+}
+
+.point-up h1 {
+    margin-top: 2rem;
+}
+
+.terep-gyakorlat {
+    background-color: #7e0000;
+}
+
+.terep-gyakorlat .title {
+    color: rgb(255, 255, 255);
+}
+
+.terep-gyakorlat .title h1 {
+    font-size: 4rem;
+    letter-spacing: 8px;
+}
+
+.terep-gyakorlat .kartya {
+
+    max-width: 40rem;
+    padding: 1rem;
+    border-radius: 30px;
+    background: rgb(228, 228, 228);
+    box-shadow: rgba(67, 67, 67, 0.73) 0px 30px 50px -12px, rgba(93, 93, 93, 0.763) 0px 18px 26px -18px;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 7rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 90%;
+}
+
+.terep-gyakorlat .kartya h1 {
+
+    font-weight: 800;
+    font-family: 'Monsterrat black', sans-serif;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    border-left: 5px solid rgb(0, 0, 0);
+    border-right: 5px solid rgb(0, 0, 0);
+    width: 70%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.terep-gyakorlat .kartya h2 {
+    margin: 0 auto;
+    font-weight: 800;
+    font-size: 2rem;
+    font-family: 'Monsterrat black', sans-serif;
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+    animation: flashing 1s infinite;
+}
+
+.terep-gyakorlat hr {
+    border-top: 5px solid rgb(255, 255, 255);
+}
+
+.hasznod {
+    margin-top: 5rem;
+    color: white;
+}
+
+.hasznod .rovid-tavu {
+    border-right: 3px solid white;
+}
+
+.hasznod .rovid-tavu p {
+    color: white;
+}
+
+.hasznod .rovid-tavu h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+.hasznod .hosszu-tavu h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+.hasznod .hosszu-tavu {
+    border-left: 3px solid white;
+    padding-left: 4rem;
+}
+
+.hasznod .hosszu-tavu p {
+    color: white;
+}
+
+@media(max-width:500px) {
+    .terep-gyakorlat .kartya h1 {
+        font-size: 1.3rem;
+    }
+
+    .terep-gyakorlat .kartya h2 {
+        font-size: 1.4rem;
+    }
+
+    .terep-gyakorlat .kartya {
+        width: 100%;
+    }
+
+    .terep-gyakorlat .title h1 {
+        font-size: 2rem;
+    }
+
+    .hasznod .rovid-tavu {
+        border-right: none;
+    }
+
+    .hasznod .rovid-tavu h1 {
+        margin-bottom: 2rem;
+    }
+
+    .hasznod .hosszu-tavu h1 {
+        margin-bottom: 2rem;
+    }
+
+    .hasznod .hosszu-tavu {
+        border-left: none;
+        border-top: 3px solid white;
+        padding-top: 2rem;
+        padding-left: 0.5rem;
+    }
+
+}
+
+.videok {
+    max-width: 800px;
+    margin: auto;
+}
